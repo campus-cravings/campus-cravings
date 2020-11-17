@@ -1,5 +1,5 @@
 import React from 'react';
-import { List } from 'semantic-ui-react';
+import { List, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -9,6 +9,8 @@ class MenuItem extends React.Component {
     return (
       <List.Item>
         {this.props.menuItem.name}
+        {this.props.menuItem.available ? (<Icon name='check' color='green'/>) : (<Icon name='close' color='red'/>) }
+        {this.props.menuItem.vegan ? (<Icon name='leaf' color='green'/>) : ''}
       </List.Item>
     );
   }
