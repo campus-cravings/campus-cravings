@@ -1,0 +1,35 @@
+import React from 'react';
+import { Card, Image, List} from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import MenuItem from './MenuItem';
+
+class Restaurant extends React.Component {
+  render() {
+    const RestaurantInfo = this.props.restaurant;
+    return (
+        <Card>
+          <Image src={RestaurantInfo.image} wrapped ui={false} />
+          <Card.Content>
+            <Card.Header>{RestaurantInfo.name}</Card.Header>
+            <Card.Meta>{RestaurantInfo.address}</Card.Meta>
+            <Card.Description>
+              {RestaurantInfo.description}
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
+          </Card.Content>
+        </Card>
+    );
+  }
+}
+
+/** Require a document to be passed to this component. */
+Restaurant.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+  menuItem: PropTypes.array.isRequired,
+};
+
+/** Wrap this component in withRouter since we use the <Link> React Router element. */
+export default withRouter(Restaurant);
