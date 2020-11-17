@@ -1,0 +1,19 @@
+.campus-cravings-logo {
+  height: 30px;
+}
+
+.landing-banner {
+  background: url('../images/cc-landing-background.png') no-repeat center fixed;
+  background-size: cover;
+  height: 500px;
+  color: white;
+}
+
+.landing-cards {
+  padding: 50px;
+}
+
+.footer-background {
+  color: white;
+  background-color: #00B5AD;
+}
