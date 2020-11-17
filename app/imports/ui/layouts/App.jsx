@@ -28,7 +28,7 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
+              <VendorProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
@@ -78,6 +78,20 @@ const AdminProtectedRoute = ({ component: Component, ...rest }) => (
     />
 );
 
+const VendorProtectedRoute = ({ component: Component, ...rest }) => (
+    <Route
+        {...rest}
+        render={(props) => {
+          const isLogged = Meteor.userId() !== null;
+          const isVendor = Roles.userIsInRole(Meteor.userId(), 'vendor');
+          return (isLogged && isVendor) ?
+              (<Component {...props} />) :
+              (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
+              );
+        }}
+    />
+);
+
 /** Require a component and location to be passed to each ProtectedRoute. */
 ProtectedRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
@@ -86,6 +100,11 @@ ProtectedRoute.propTypes = {
 
 /** Require a component and location to be passed to each AdminProtectedRoute. */
 AdminProtectedRoute.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+  location: PropTypes.object,
+};
+
+VendorProtectedRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   location: PropTypes.object,
 };
