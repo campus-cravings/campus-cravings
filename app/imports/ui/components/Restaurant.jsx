@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, Image, List} from 'semantic-ui-react';
+import { Card, Header, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import MenuItem from './MenuItem';
+import { NavLink, withRouter } from 'react-router-dom';
 
 class Restaurant extends React.Component {
   render() {
@@ -18,17 +17,16 @@ class Restaurant extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
+            <Header as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Header>
           </Card.Content>
         </Card>
     );
   }
 }
-
+// <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
 /** Require a document to be passed to this component. */
 Restaurant.propTypes = {
   restaurant: PropTypes.object.isRequired,
-  menuItem: PropTypes.array.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
