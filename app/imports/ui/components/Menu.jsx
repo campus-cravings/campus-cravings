@@ -10,9 +10,14 @@ class Menu extends React.Component {
     const RestaurantInfo = this.props.restaurant;
     return (
         <Card>
-          <Image src={RestaurantInfo.image} wrapped ui={false} />
           <Card.Content>
+            <Image
+                floated='right'
+                size='mini'
+                src={RestaurantInfo.image}
+            />
             <Card.Header>{RestaurantInfo.name}</Card.Header>
+            <Card.Meta>Menu</Card.Meta>
           </Card.Content>
           <Card.Content extra>
             <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>

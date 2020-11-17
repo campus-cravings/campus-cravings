@@ -7,7 +7,9 @@ import { withRouter } from 'react-router-dom';
 class MenuItem extends React.Component {
   render() {
     return (
-      <List.Item>{this.props.menuItem.name}</List.Item>
+      <List.Item>
+        {this.props.menuItem.name}
+      </List.Item>
     );
   }
 }
