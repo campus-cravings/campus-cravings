@@ -12,12 +12,12 @@ function addData(data) {
 }
 
 function addRestaurant(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
+  console.log(`  Adding: ${data.name} `);
   Restaurants.collection.insert(data);
 }
 
 function addMenuItem(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
+  console.log(`  Adding: ${data.name} `);
   MenuItems.collection.insert(data);
 }
 
@@ -30,14 +30,14 @@ if (Stuffs.collection.find().count() === 0) {
 }
 
 if (Restaurants.collection.find().count() === 0) {
-  if (Meteor.settings.defaultData) {
+  if (Meteor.settings.defaultRestaurants) {
     console.log('Creating default data.');
     Meteor.settings.defaultRestaurants.map(data => addRestaurant(data));
   }
 }
 
 if (MenuItems.collection.find().count() === 0) {
-  if (Meteor.settings.defaultData) {
+  if (Meteor.settings.defaultMenuItems) {
     console.log('Creating default data.');
     Meteor.settings.defaultMenuItems.map(data => addMenuItem(data));
   }

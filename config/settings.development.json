@@ -12,17 +12,17 @@
   ],
 
   "defaultRestaurants": [
-    {"name": "Panda Express", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "https://tse1.mm.bing.net/th?id=OIP.vmHq-u5GTZgRBStK76b1ZAHaHa&pid=Api&P=0&w=300&h=300", "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp.", "owner": "john@foo.com" },
-    {"name": "L&L Hawaiian Barbecue", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/L%26L_Hawaiian_Barbecue_logo.svg/1200px-L%26L_Hawaiian_Barbecue_logo.svg.png", "description": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L’s famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.", "owner": "john@foo.com" }
+    {"name": "Panda Express", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "https://tse1.mm.bing.net/th?id=OIP.vmHq-u5GTZgRBStK76b1ZAHaHa&pid=Api&P=0&w=300&h=300", "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp." },
+    {"name": "L&L Hawaiian Barbecue", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/L%26L_Hawaiian_Barbecue_logo.svg/1200px-L%26L_Hawaiian_Barbecue_logo.svg.png", "description": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L’s famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available." }
   ],
 
   "defaultMenuItems": [
-    { "name": "Orange Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express", "owner": "john@foo.com" },
-    { "name": "Beijing Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express", "owner": "john@foo.com" },
-    { "name": "Broccoli Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express", "owner": "john@foo.com" },
-    { "name": "Mushroom Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express", "owner": "john@foo.com" },
-    { "name": "BBQ Chicken", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue", "owner": "john@foo.com" },
-    { "name": "Teriyaki Pork", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue", "owner": "john@foo.com" },
-    { "name": "Shrimp Curry", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue", "owner": "john@foo.com" }
+    { "name": "Orange Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express"  },
+    { "name": "Beijing Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express" },
+    { "name": "Broccoli Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express"  },
+    { "name": "Mushroom Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express" },
+    { "name": "BBQ Chicken", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Teriyaki Pork", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Shrimp Curry", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" }
   ]
 }

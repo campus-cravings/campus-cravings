@@ -16,16 +16,14 @@ Meteor.publish(Stuffs.userPublicationName, function () {
 
 Meteor.publish(Restaurants.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Restaurants.collection.find({ owner: username });
+    return Restaurants.collection.find();
   }
   return this.ready();
 });
 
 Meteor.publish(MenuItems.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return MenuItems.collection.find({ owner: username });
+    return MenuItems.collection.find();
   }
   return this.ready();
 });
@@ -42,6 +40,13 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 Meteor.publish(Restaurants.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Restaurants.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(MenuItems.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return MenuItems.collection.find();
   }
   return this.ready();
 });
