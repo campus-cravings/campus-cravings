@@ -17,12 +17,12 @@
   ],
 
   "defaultMenuItems": [
-    { "name": "Orange Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express"  },
-    { "name": "Beijing Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express" },
-    { "name": "Broccoli Beef", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express"  },
-    { "name": "Mushroom Chicken", "type": "Chinese", "vegan": "no", "available": "yes", "restaurant": "Panda Express" },
-    { "name": "BBQ Chicken", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" },
-    { "name": "Teriyaki Pork", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" },
-    { "name": "Shrimp Curry", "type": "Hawaiian", "vegan": "no", "available": "yes", "restaurant": "L&L Hawaiian Barbecue" }
+    { "name": "Orange Chicken", "type": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express"  },
+    { "name": "Beijing Beef", "type": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express" },
+    { "name": "Broccoli Beef", "type": "Chinese", "vegan": "TRUE", "available": "TRUE", "restaurant": "Panda Express"  },
+    { "name": "Mushroom Chicken", "type": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express" },
+    { "name": "BBQ Chicken", "type": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Teriyaki Pork", "type": "Hawaiian", "vegan": "FALSE", "available": "FALSE", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Shrimp Curry", "type": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" }
   ]
 }
