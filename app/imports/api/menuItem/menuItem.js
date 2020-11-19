@@ -13,16 +13,8 @@ class MenuItemsCollection {
     this.schema = new SimpleSchema({
       name: String,
       type: String,
-      vegan: {
-        type: String,
-        allowedValues: ['yes', 'no',],
-        defaultValue: 'no',
-      },
-      available: {
-        type: String,
-        allowedValues: ['yes', 'no',],
-        defaultValue: 'no',
-      },
+      vegan: Boolean,
+      available: Boolean,
       restaurant: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
