@@ -19,7 +19,7 @@ class ListRestaurants extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Restaurants</Header>
+          <Header as="h2" textAlign="center">Menu</Header>
           <Card.Group centered>{this.props.restaurants.map((restaurants, index) => <Menu
               key={index}
               restaurant={restaurants}
