@@ -1,10 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Label, Icon, Form, Divider, Grid } from 'semantic-ui-react';
+import { Container, Header, Loader, Label, Icon, Form, Divider } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Stuffs } from '../../api/stuff/Stuff';
-import StuffItem from '../components/StuffItem';
 
 const prefs = [
   { text: 'Option 1', value: 1 },
