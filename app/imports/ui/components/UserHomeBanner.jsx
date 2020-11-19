@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Image } from 'semantic-ui-react';
+import { Grid, Header } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the user home page. */
 class LandingBanner extends React.Component {
