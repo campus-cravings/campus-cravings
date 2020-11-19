@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
+import { Restaurants } from '../../api/restaurant/Restaurant';
+import { MenuItems } from '../../api/menuItem/menuItem';
 
 /* eslint-disable no-console */
 
@@ -9,10 +11,34 @@ function addData(data) {
   Stuffs.collection.insert(data);
 }
 
+function addRestaurant(data) {
+  console.log(`  Adding: ${data.name} `);
+  Restaurants.collection.insert(data);
+}
+
+function addMenuItem(data) {
+  console.log(`  Adding: ${data.name} `);
+  MenuItems.collection.insert(data);
+}
+
 /** Initialize the collection if empty. */
 if (Stuffs.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {
     console.log('Creating default data.');
     Meteor.settings.defaultData.map(data => addData(data));
+  }
+}
+
+if (Restaurants.collection.find().count() === 0) {
+  if (Meteor.settings.defaultRestaurants) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultRestaurants.map(data => addRestaurant(data));
+  }
+}
+
+if (MenuItems.collection.find().count() === 0) {
+  if (Meteor.settings.defaultMenuItems) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultMenuItems.map(data => addMenuItem(data));
   }
 }

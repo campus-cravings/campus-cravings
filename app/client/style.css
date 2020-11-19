@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.campus-cravings-logo {
+  height: 30px;
+}
+
+.landing-banner {
+  background: url('../images/cc-landing-background.png') no-repeat center fixed;
+  background-size: cover;
+  height: 500px;
+  color: white;
+}
+
+.landing-cards {
+  padding: 50px;
+}
+
+.userhome-banner {
+  background: url('../images/cc-userhome-background.png') no-repeat center fixed;
+  background-size: cover;
+  height: 500px;
+  color: white;
+}
+
+.welcome-text {
+  font-size: 10em;
+  font-family: "Lobster";
+}
+
+.footer-background {
+  color: white;
+  background-color: #00B5AD;
+}
