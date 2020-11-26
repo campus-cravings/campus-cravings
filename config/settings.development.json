@@ -1,7 +1,8 @@
 {
   "defaultAccounts": [
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "john@foo.com", "password": "changeme" },
+    { "email": "bob@foo.com", "password": "changeme" }
   ],
 
   "defaultData": [
@@ -24,5 +25,12 @@
     { "name": "BBQ Chicken", "type": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" },
     { "name": "Teriyaki Pork", "type": "Hawaiian", "vegan": "FALSE", "available": "FALSE", "restaurant": "L&L Hawaiian Barbecue" },
     { "name": "Shrimp Curry", "type": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" }
+  ],
+
+  "defaultFavorites": [
+    { "food": "Orange Chicken", "owner": "john@foo.com" },
+    { "food": "Beijing Beef", "owner": "john@foo.com" },
+    { "food": "Mushroom Chicken", "owner": "john@foo.com" },
+    { "food": "BBQ Chicken", "owner": "bob@foo.com" }
   ]
 }
