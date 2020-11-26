@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { Restaurants } from '../../api/restaurant/Restaurant';
 import { MenuItems } from '../../api/menuItem/menuItem';
 import Menu from '../components/Menu';
+import { Favorites } from '../../api/favorite/Favorite';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListRestaurants extends React.Component {
@@ -42,9 +43,10 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Restaurants.userPublicationName);
   const subscription2 = Meteor.subscribe(MenuItems.userPublicationName);
+  const subscription3 = Meteor.subscribe(Favorites.userPublicationName);
   return {
     menuItem: MenuItems.collection.find({}).fetch(),
     restaurants: Restaurants.collection.find({}).fetch(),
-    ready: subscription.ready() && subscription2.ready(),
+    ready: subscription.ready() && subscription2.ready() && subscription3.ready(),
   };
 })(ListRestaurants);
