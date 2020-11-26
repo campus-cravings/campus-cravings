@@ -4,7 +4,6 @@ import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Restaurants } from '../../api/restaurant/Restaurant';
-import { MenuItems } from '../../api/menuItem/menuItem';
 import Restaurant from '../components/Restaurant';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
