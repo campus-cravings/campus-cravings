@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Restaurants } from '../../api/restaurant/Restaurant';
+import { Favorites } from '../../api/favorite/Favorite';
 import { MenuItems } from '../../api/menuItem/menuItem';
 
 // User-level publication.
@@ -24,6 +25,14 @@ Meteor.publish(Restaurants.userPublicationName, function () {
 Meteor.publish(MenuItems.userPublicationName, function () {
   if (this.userId) {
     return MenuItems.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Favorites.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Favorites.collection.find({ owner: username });
   }
   return this.ready();
 });
