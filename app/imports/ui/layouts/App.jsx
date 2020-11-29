@@ -18,6 +18,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profile from '../pages/Profile';
 import UserHome from '../pages/UserHome';
+import ListFavorites from '../pages/ListFavorites';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
               <ProtectedRoute path="/profile" component={Profile}/>
               <ProtectedRoute path="/vendor" component={ListRestaurants}/>
               <ProtectedRoute path="/menu" component={ListMenu}/>
+              <ProtectedRoute path="/fav" component={ListFavorites}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
