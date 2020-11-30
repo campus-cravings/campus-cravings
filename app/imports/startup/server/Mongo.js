@@ -56,10 +56,10 @@ if (Favorites.collection.find().count() === 0) {
   }
 }
 
-if ((Meteor.settings.loadAssetsFile) && (Restaurants.find().count() < 3)) {
+if ((Meteor.settings.loadAssetsFile) && (Restaurants.collection.find().count() < 3)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.restaurants.map(restaurant => addRestaurant(restaurant));
+  jsonData.moreRestaurants.map(restaurant => addRestaurant(restaurant));
   jsonData.menuItems.map(item => addMenuItem(item));
 }
