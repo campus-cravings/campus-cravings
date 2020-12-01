@@ -34,6 +34,9 @@ Meteor.publish(Prefs.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Prefs.collection.find({ owner: username });
+  }
+  return this.ready();
+});
 
 Meteor.publish(Favorites.userPublicationName, function () {
   if (this.userId) {
