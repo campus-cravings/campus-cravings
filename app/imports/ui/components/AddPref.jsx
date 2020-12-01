@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Segment } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SubmitField, TextField /* , HiddenField */ } from 'uniforms-semantic';
+import { AutoForm, ErrorField, SubmitField, SelectField /* , HiddenField */ } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
@@ -14,6 +14,29 @@ const formSchema = new SimpleSchema({
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 /* const bridge = new SimpleSchema2Bridge(Prefs.schema); */
+
+const preferences = [
+  {
+    label: 'Developer',
+    value: 'developer',
+  },
+  {
+    label: 'Tester',
+    value: 'tester',
+  },
+  {
+    label: 'Product owner',
+    value: 'product-owner',
+  },
+  {
+    label: 'Project manager',
+    value: 'project-manager',
+  },
+  {
+    label: 'Businessman',
+    value: 'businessman',
+  },
+];
 
 /** Renders the Page for adding a document. */
 class AddPref extends React.Component {
@@ -39,9 +62,10 @@ class AddPref extends React.Component {
     return (
         <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
           <Segment>
-            <TextField label="Add a preference" name='pref'/>
-              <SubmitField value='Submit'/>
-              <ErrorsField/>
+            <SelectField name='pref' options={preferences} />
+            <ErrorField name="pref"
+                         errorMessage="You have to provide at least one preference!"/>
+            <SubmitField value='Submit'/>
               {/* <HiddenField name='owner' value={this.props.owner}/> */}
           </Segment>
         </AutoForm>
