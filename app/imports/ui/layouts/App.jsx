@@ -11,7 +11,6 @@ import ListRestaurants from '../pages/ListRestaurants';
 import ListMenu from '../pages/ListMenu';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddRestaurants from '../pages/AddRestaurants';
-import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -19,6 +18,7 @@ import Signout from '../pages/Signout';
 import Profile from '../pages/Profile';
 import UserHome from '../pages/UserHome';
 import ListFavorites from '../pages/ListFavorites';
+import EditRestaurants from '../pages/EditRestaurants';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -37,7 +37,7 @@ class App extends React.Component {
               <ProtectedRoute path="/fav" component={ListFavorites}/>
               <VendorProtectedRoute path="/add" component={AddRestaurants}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>

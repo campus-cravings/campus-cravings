@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Header, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter, Link } from 'react-router-dom';
 
 class Restaurant extends React.Component {
   render() {
@@ -12,12 +12,17 @@ class Restaurant extends React.Component {
           <Card.Content>
             <Card.Header>{RestaurantInfo.name}</Card.Header>
             <Card.Meta>{RestaurantInfo.address}</Card.Meta>
+            <Card.Meta>{RestaurantInfo.serviceDays}</Card.Meta>
+            <Card.Meta>{RestaurantInfo.serviceHours}</Card.Meta>
             <Card.Description>
               {RestaurantInfo.description}
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
             <Header as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Header>
+          </Card.Content>
+          <Card.Content extra>
+            <Link to={`/edit/${this.props.restaurant._id}`}>Edit</Link>
           </Card.Content>
         </Card>
     );
