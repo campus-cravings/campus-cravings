@@ -12,6 +12,8 @@ const formSchema = new SimpleSchema({
   name: String,
   address: String,
   image: String,
+  serviceDays: String,
+  serviceHours: String,
   description: String,
 });
 
@@ -22,9 +24,9 @@ class AddRestaurants extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, address, image, description } = data;
+    const { name, address, image, serviceDays, serviceHours, description } = data;
     const owner = Meteor.user().username;
-    Restaurants.collection.insert({ name, address, image, description, owner },
+    Restaurants.collection.insert({ name, address, image, serviceDays, serviceHours, description, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -47,6 +49,8 @@ class AddRestaurants extends React.Component {
                 <TextField name='name'/>
                 <TextField name='address'/>
                 <TextField name='image'/>
+                <TextField name='serviceDays'/>
+                <TextField name='serviceHours'/>
                 <LongTextField name='description'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
