@@ -10,7 +10,6 @@ class MenuItem extends React.Component {
       <List.Item>
         <Icon name='star outline'/>
         {this.props.menuItem.name}
-        {this.props.menuItem.available ? (<Icon name='check' color='green'/>) : (<Icon name='close' color='red'/>) }
         {this.props.menuItem.vegan ? (<Icon name='leaf' color='green'/>) : ''}
       </List.Item>
     );
