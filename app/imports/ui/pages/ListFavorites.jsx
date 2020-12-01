@@ -18,8 +18,7 @@ class ListFavorites extends React.Component {
 
   getRestaurant(item) {
     const arr = this.props.restaurants.filter(restaurant => (restaurant.name === item.restaurant));
-    const restaurant = arr.pop();
-    return restaurant;
+    return arr.pop();
   }
 
   /** Render the page once subscriptions have been received. */
