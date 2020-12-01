@@ -30,7 +30,7 @@ class Menu extends React.Component {
 /** Require a document to be passed to this component. */
 Menu.propTypes = {
   restaurant: PropTypes.object.isRequired,
-  menuItem: PropTypes.object.isRequired,
+  menuItem: PropTypes.array.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
