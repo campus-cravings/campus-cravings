@@ -35,7 +35,7 @@ class Profile extends React.Component {
             </Header>
           </Divider>
           <Label.Group fluid center size="large">
-            {this.props.prefs.map((pref, index) => <Pref key={index} pref={pref}/>)}
+            {this.props.prefs.map((pref, index) => <Pref key={index} pref={pref} owner={this.props.prefs.owner}/>)}
             {/* Testing Preferences
             <Label>
               Vegan

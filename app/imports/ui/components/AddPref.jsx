@@ -17,24 +17,36 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 const preferences = [
   {
-    label: 'Developer',
-    value: 'developer',
+    label: 'Vegan',
+    value: 'vegan',
   },
   {
-    label: 'Tester',
-    value: 'tester',
+    label: 'Vegetarian',
+    value: 'vegetarian',
   },
   {
-    label: 'Product owner',
-    value: 'product-owner',
+    label: 'Gluten-Free',
+    value: 'gluten-free',
   },
   {
-    label: 'Project manager',
-    value: 'project-manager',
+    label: 'Nut-Free',
+    value: 'nut-free',
   },
   {
-    label: 'Businessman',
-    value: 'businessman',
+    label: 'Hawaiian',
+    value: 'hawaiian',
+  },
+  {
+    label: 'Chinese',
+    value: 'chinese',
+  },
+  {
+    label: 'Food-Truck',
+    value: 'food-truck',
+  },
+  {
+    label: 'Coffee',
+    value: 'coffee',
   },
 ];
 
@@ -62,7 +74,7 @@ class AddPref extends React.Component {
     return (
         <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
           <Segment>
-            <SelectField name='pref' options={preferences} />
+            <SelectField name='pref' label='Preferences' options={preferences} />
             <ErrorField name="pref"
                          errorMessage="You have to provide at least one preference!"/>
             <SubmitField value='Submit'/>
