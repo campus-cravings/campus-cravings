@@ -6,7 +6,7 @@ import LandingCards from '../components/LandingCards';
 class Landing extends React.Component {
   render() {
     return (
-        <div id='landing-page'>
+        <div>
           <LandingBanner/>
           <LandingCards/>
         </div>

@@ -6,7 +6,7 @@ import VendorHomeCards from '../components/VendorHomeCards';
 class VendorHome extends React.Component {
   render() {
     return (
-        <div id='vendorhome-page'>
+        <div>
           <VendorHomeBanner/>
           <VendorHomeCards/>
         </div>
