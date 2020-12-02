@@ -31,7 +31,7 @@ class EditRestaurants extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Edit Your Restaurant's Info</Header>
+            <Header as="h2" textAlign="center">Edit Your Restaurants Info</Header>
             <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
               <Segment>
                 <TextField name='name'/>

@@ -17,8 +17,11 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profile from '../pages/Profile';
 import UserHome from '../pages/UserHome';
+import AdminHome from '../pages/AdminHome';
+import VendorHome from '../pages/VendorHome';
 import ListFavorites from '../pages/ListFavorites';
 import EditRestaurants from '../pages/EditRestaurants';
+import TodaysTopPicks from '../pages/TodaysTopPicks';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,13 +35,16 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/profile" component={Profile}/>
+              <ProtectedRoute path="/todaystoppicks" component={TodaysTopPicks}/>
               <ProtectedRoute path="/vendor" component={ListRestaurants}/>
               <ProtectedRoute path="/menu" component={ListMenu}/>
               <ProtectedRoute path="/fav" component={ListFavorites}/>
               <VendorProtectedRoute path="/add" component={AddRestaurants}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
+              <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
               <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/adminhome" component={AdminHome}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

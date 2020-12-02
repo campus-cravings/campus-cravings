@@ -4,6 +4,16 @@
   height: 30px;
 }
 
+.welcome-text {
+  font-size: 10em;
+  font-family: "Lobster";
+}
+
+.footer-background {
+  color: white;
+  background-color: #00B5AD;
+}
+
 .landing-banner {
   background: url('../images/cc-landing-background.png') no-repeat center fixed;
   background-size: cover;
@@ -22,12 +32,16 @@
   color: white;
 }
 
-.welcome-text {
-  font-size: 10em;
-  font-family: "Lobster";
+.adminhome-banner {
+  background: url('../images/cc-adminhome-background.png') no-repeat center fixed;
+  background-size: cover;
+  height: 500px;
+  color: white;
 }
 
-.footer-background {
+.vendorhome-banner {
+  background: url('../images/cc-vendorhome-background.png') no-repeat center fixed;
+  background-size: cover;
+  height: 500px;
   color: white;
-  background-color: #00B5AD;
 }
