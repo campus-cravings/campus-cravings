@@ -1,7 +1,14 @@
 {
+  "monti": {
+    "appId": "changeme",
+    "appSecret": "changeme"
+  },
+
   "defaultAccounts": [
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" },
+    { "email": "john@foo.com", "password": "changeme" },
+    { "email": "bob@foo.com", "password": "changeme" }
   ],
 
   "defaultData": [
@@ -11,9 +18,26 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
+  "defaultRestaurants": [
+    {"name": "Panda Express", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "../images/panda-express.jpg", "serviceDays": "Monday – Friday", "serviceHours": "10:30am – 2:00pm", "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp." },
+    {"name": "L&L Hawaiian Barbecue", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "../images/L&L.png", "serviceDays": "Monday – Friday", "serviceHours": "10:30am – 2:00pm", "description": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L’s famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available." }
+  ],
 
-  "monti": {
-    "appId": "changeme",
-    "appSecret": "changeme"
-  }
+  "defaultMenuItems": [
+    { "name": "Orange Chicken", "type": "entree", "ethnicity": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express"  },
+    { "name": "Beijing Beef", "type": "entree", "ethnicity": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express" },
+    { "name": "Broccoli Beef", "type": "entree", "ethnicity": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express"  },
+    { "name": "Mushroom Chicken", "type": "entree", "ethnicity": "Chinese", "vegan": "FALSE", "available": "TRUE", "restaurant": "Panda Express" },
+    { "name": "BBQ Chicken", "type": "entree", "ethnicity": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Teriyaki Pork", "type": "entree", "ethnicity": "Hawaiian", "vegan": "FALSE", "available": "FALSE", "restaurant": "L&L Hawaiian Barbecue" },
+    { "name": "Shrimp Curry", "type": "entree", "ethnicity": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" }
+  ],
+
+  "defaultFavorites": [
+    { "food": "Orange Chicken", "owner": "john@foo.com" },
+    { "food": "Beijing Beef", "owner": "john@foo.com" },
+    { "food": "Mushroom Chicken", "owner": "john@foo.com" },
+    { "food": "BBQ Chicken", "owner": "bob@foo.com" }
+  ],
+  "loadAssetsFile": "true"
 }
