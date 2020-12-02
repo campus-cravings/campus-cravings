@@ -13,6 +13,7 @@ class MenuItemsCollection {
     this.schema = new SimpleSchema({
       name: String,
       type: String,
+      ethnicity: String,
       vegan: Boolean,
       available: Boolean,
       restaurant: String,
