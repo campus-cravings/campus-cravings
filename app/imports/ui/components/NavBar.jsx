@@ -16,17 +16,17 @@ class NavBar extends React.Component {
             <Image className="campus-cravings-logo" src="../images/cc-logo-small.png"/>
           </Menu.Item>
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/adminhome" key='adminhome'>Admin Home</Menu.Item>
+              <Menu.Item id='navbar-admin-home' as={NavLink} activeClassName="active" exact to="/adminhome" key='adminhome'>Admin Home</Menu.Item>
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/vendorhome" key='vendorhome'>Vendor Home</Menu.Item>
+              <Menu.Item id='navbar-vendor-home' as={NavLink} activeClassName="active" exact to="/vendorhome" key='vendorhome'>Vendor Home</Menu.Item>
           ) : ''}
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'>Home</Menu.Item>,
+              [<Menu.Item id='navbar-user-home' as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'>Home</Menu.Item>,
                 <Menu.Item id="navbar-favorites" as={NavLink} activeClassName="active" exact to="/fav" key='fav'>Favorites</Menu.Item>,
                 <Menu.Item id="navbar-list-restaurants" as={NavLink} activeClassName="active" exact to="/vendor" key='vendor'>List Restaurants</Menu.Item>,
                 <Menu.Item id="navbar-list-menu" as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/todaystoppicks" key='todaystoppicks'>Today&#39;s Top Picks</Menu.Item>]
+                <Menu.Item id='navbar-top-picks' as={NavLink} activeClassName="active" exact to="/todaystoppicks" key='todaystoppicks'>Today&#39;s Top Picks</Menu.Item>]
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>

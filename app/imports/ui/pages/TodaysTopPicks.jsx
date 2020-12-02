@@ -6,7 +6,7 @@ import TopPicks from '../components/TopPicks';
 class TodaysTopPicks extends React.Component {
   render() {
     return (
-        <div>
+        <div id='toppicks-page'>
           <Header as="h2" textAlign="center">Today&#39;s Top Picks</Header>
           <TopPicks/>
         </div>

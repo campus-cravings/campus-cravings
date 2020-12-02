@@ -6,7 +6,7 @@ import AdminHomeCards from '../components/AdminHomeCards';
 class AdminHome extends React.Component {
   render() {
     return (
-        <div>
+        <div id='adminhome-page'>
           <AdminHomeBanner/>
           <AdminHomeCards/>
         </div>
