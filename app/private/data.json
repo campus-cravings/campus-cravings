@@ -456,7 +456,7 @@
     { "name": "French Fries", "type": "side", "ethnicity": "none", "vegan": "TRUE", "available": "TRUE", "restaurant": "Da Grill"  },
     { "name": "Salad", "type": "side", "ethnicity": "none", "vegan": "TRUE", "available": "TRUE", "restaurant": "Da Grill"  },
 
-    { "name": "Flat White", "type": "drink", "ethnicity": "none", "vegan": "", "available": "TRUE", "restaurant": "Starbucks"  },
+    { "name": "Flat White", "type": "drink", "ethnicity": "none", "vegan": "TRUE", "available": "TRUE", "restaurant": "Starbucks"  },
     { "name": "Caramel Macchiato", "type": "drink", "ethnicity": "none", "vegan": "FALSE", "available": "TRUE", "restaurant": "Starbucks"  },
     { "name": "Latte Machiatto", "type": "drink", "ethnicity": "none", "vegan": "FALSE", "available": "TRUE", "restaurant": "Starbucks"  },
     { "name": "Cinnamon Dolce Latte", "type": "drink", "ethnicity": "none", "vegan": "FALSE", "available": "TRUE", "restaurant": "Starbucks"  },
