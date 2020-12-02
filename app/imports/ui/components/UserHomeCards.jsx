@@ -9,7 +9,7 @@ class UserHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card className="testing">
+              <Card href='#'>
                 <Image src='../images/cc-userhome-cafe.png' alt='userhome-cafe-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Smart Menu</Card.Header>
@@ -20,7 +20,7 @@ class UserHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-userhome-kebab.png' alt='userhome-kebab-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Try Something New</Card.Header>
@@ -29,7 +29,7 @@ class UserHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-userhome-musubi.png' alt='userhome-musubi-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Stop Wandering</Card.Header>

@@ -9,7 +9,7 @@ class AdminHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card className="testing">
+              <Card href='#'>
                 <Image src='../images/cc-adminhome-accounts.png' alt='adminhome-accounts-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Manage accounts</Card.Header>
@@ -18,7 +18,7 @@ class AdminHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-adminhome-tools.png' alt='adminhome-tools-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Tools at your disposal</Card.Header>
