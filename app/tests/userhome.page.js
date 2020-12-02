@@ -1,12 +1,8 @@
 import { Selector } from 'testcafe';
 
-class TopPicksPage {
+class UserHomePage {
   constructor() {
-<<<<<<< Updated upstream
-    this.pageId = '#top-picks-page';
-=======
-    this.pageId = '#toppicks-page';
->>>>>>> Stashed changes
+    this.pageId = '#userhome-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -16,4 +12,4 @@ class TopPicksPage {
   }
 }
 
-export const topPicksPage = new TopPicksPage();
+export const userHomePage = new UserHomePage();

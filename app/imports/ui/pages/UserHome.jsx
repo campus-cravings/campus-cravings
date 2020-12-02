@@ -6,7 +6,7 @@ import UserHomeCards from '../components/UserHomeCards';
 class UserHome extends React.Component {
   render() {
     return (
-        <div>
+        <div id='userhome-page'>
           <UserHomeBanner/>
           <UserHomeCards/>
         </div>

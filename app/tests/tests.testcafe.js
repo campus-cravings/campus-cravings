@@ -7,13 +7,20 @@ import { listFavoritesPage } from './listfavorites.page';
 import { profilePage } from './profile.page';
 import { navBar } from './navbar.component';
 import { addRestaurantPage } from './addrestaurant.page';
+<<<<<<< Updated upstream
+=======
+import { userHomePage } from './userhome.page';
+import { vendorHomePage } from './vendorhome.page';
+import { adminHomePage } from './adminhome.page';
+>>>>>>> Stashed changes
 import { topPicksPage } from './toppicks.page';
 
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'john@foo.com', password: 'changeme' };
-const vendor = { username: 'vendor@foo.com', password: 'changeme'};
+const admin = { username: 'admin@foo.com', password: 'changeme' };
+const vendor = { username: 'vendor@foo.com', password: 'changeme' };
 
 fixture('meteor-application-template-react localhost test with default db')
     .page('http://localhost:3000');
@@ -30,6 +37,14 @@ test('Test that signin and signout work', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
+test('Test admin functions', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, admin.username, admin.password);
+  await navBar.isLoggedIn(testController, admin.username);
+  await navBar.gotoAdminHomePage(testController);
+  await adminHomePage.isDisplayed(testController);
+});
+
 test('Test vendor functions', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, vendor.username, vendor.password);
@@ -37,6 +52,8 @@ test('Test vendor functions', async (testController) => {
   await navBar.gotoAddRestaurtantPage(testController);
   await addRestaurantPage.isDisplayed(testController);
   await addRestaurantPage.insertRestaurant(testController);
+  await navBar.gotoVendorHomePage(testController);
+  await vendorHomePage.isDisplayed(testController);
 });
 
 test('Test the pages in the navbar', async (testController) => {
@@ -50,6 +67,11 @@ test('Test the pages in the navbar', async (testController) => {
   await listFavoritesPage.isDisplayed(testController);
   await navBar.gotoProfilePage(testController);
   await profilePage.isDisplayed(testController);
+<<<<<<< Updated upstream
+=======
+  await navBar.gotoUserHomePage(testController);
+  await userHomePage.isDisplayed(testController);
+>>>>>>> Stashed changes
   await navBar.gotoTopPicksPage(testController);
   await topPicksPage.isDisplayed(testController);
 });
