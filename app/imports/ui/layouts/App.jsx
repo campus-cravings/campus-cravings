@@ -17,6 +17,8 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profile from '../pages/Profile';
 import UserHome from '../pages/UserHome';
+import AdminHome from '../pages/AdminHome';
+import VendorHome from '../pages/VendorHome';
 import ListFavorites from '../pages/ListFavorites';
 import EditRestaurants from '../pages/EditRestaurants';
 
@@ -37,8 +39,11 @@ class App extends React.Component {
               <ProtectedRoute path="/fav" component={ListFavorites}/>
               <VendorProtectedRoute path="/add" component={AddRestaurants}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
+              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
               <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/adminhome" component={AdminHome}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
