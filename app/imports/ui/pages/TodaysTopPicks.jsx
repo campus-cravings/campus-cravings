@@ -1,6 +1,6 @@
 import React from 'react';
-import TopPicks from '../components/TopPicks';
 import { Header } from 'semantic-ui-react';
+import TopPicks from '../components/TopPicks';
 
 /** A simple static component to render some text for the todays top picks page. */
 class TodaysTopPicks extends React.Component {

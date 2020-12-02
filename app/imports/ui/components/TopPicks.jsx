@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Image, Icon } from 'semantic-ui-react';
+import { Card, Container, Image } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class TopPicks extends React.Component {
@@ -29,7 +29,7 @@ class TopPicks extends React.Component {
               </Card.Content>
             </Card>
             <Card fluid href='#'>
-              <Image src='cc-toppicks-orangechicken.png' alt='toppicks-orangechicken-img' wrapped ui={false} />
+              <Image src='../images/cc-toppicks-orangechicken.png' alt='toppicks-orangechicken-img' wrapped ui={false} />
               <Card.Content>
                 <Card.Header>Orange Chicken</Card.Header>
                 <Card.Description>
