@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Card, Container } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the user home page. */
-class LandingCards extends React.Component {
+class UserHomeCards extends React.Component {
   render() {
 
     return (
@@ -17,7 +17,6 @@ class LandingCards extends React.Component {
                     Get a customized menu of only foods you like.
                     Just set your preferences such as cuisine styles and
                     we&#39;ll adjust the list of available dishes according to your desires.
-                    [Link to profile page]
                   </Card.Description>
                 </Card.Content>
               </Card>
@@ -27,7 +26,6 @@ class LandingCards extends React.Component {
                   <Card.Header>Try Something New</Card.Header>
                   <Card.Description>
                     Have a taste of these recommendations by your favorite restaurants.
-                    [Link to top-picks]
                   </Card.Description>
                 </Card.Content>
               </Card>
@@ -37,7 +35,6 @@ class LandingCards extends React.Component {
                   <Card.Header>Stop Wandering</Card.Header>
                   <Card.Description>
                     Check out the restaurants around campus in just one site.
-                    [Link to restaurant list]
                   </Card.Description>
                 </Card.Content>
               </Card>
@@ -48,4 +45,4 @@ class LandingCards extends React.Component {
   }
 }
 
-export default LandingCards;
+export default UserHomeCards;
