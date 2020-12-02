@@ -9,7 +9,7 @@ class VendorHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-vendorhome-menu.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Change it up</Card.Header>
@@ -18,7 +18,7 @@ class VendorHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-vendorhome-stars.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Dish of the day</Card.Header>

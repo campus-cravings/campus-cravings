@@ -9,7 +9,7 @@ class LandingCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card className="testing">
+              <Card href='#'>
                 <Image src='../images/cc-landing-buffet.png' alt='landing-buffet-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Top Picks</Card.Header>
@@ -18,7 +18,7 @@ class LandingCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-landing-map.png' alt='landing-map-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Currently Available</Card.Header>
@@ -28,7 +28,7 @@ class LandingCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card>
+              <Card href='#'>
                 <Image src='../images/cc-landing-crepe.png' alt='landing-crepe-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Preferred Dishes</Card.Header>
