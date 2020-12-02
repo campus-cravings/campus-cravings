@@ -40,8 +40,6 @@ test('Test vendor functions', async (testController) => {
   await navBar.gotoAddRestaurtantPage(testController);
   await addRestaurantPage.isDisplayed(testController);
   await addRestaurantPage.insertRestaurant(testController);
-  await navBar.gotoVendorHomePage(testController);
-  await vendorHomePage.isDisplayed(testController);
 });
 
 test('Test the pages in the navbar', async (testController) => {
@@ -67,4 +65,12 @@ test('Test admin functions', async (testController) => {
   await navBar.isLoggedIn(testController, admin.username);
   await navBar.gotoAdminHomePage(testController);
   await adminHomePage.isDisplayed(testController);
+});
+
+test('Test vendor functions', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, vendor.username, vendor.password);
+  await navBar.isLoggedIn(testController, vendor.username);
+  await navBar.gotoVendorHomePage(testController);
+  await vendorHomePage.isDisplayed(testController);
 });
