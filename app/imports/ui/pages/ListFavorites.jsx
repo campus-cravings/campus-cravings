@@ -26,7 +26,7 @@ class ListFavorites extends React.Component {
     const fav = this.props.favorites.map(favor => this.props.menuItem.filter(item => (item.name === favor.food)));
     const flat = fav.flat();
     return (
-        <Container>
+        <Container id="listfavorites-page">
           <Header as="h2" textAlign="center">Favorites</Header>
           <Card.Group centered>{flat.map((item, index) => <Favorite
               key={index}

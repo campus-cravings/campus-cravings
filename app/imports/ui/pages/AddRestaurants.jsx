@@ -41,18 +41,18 @@ class AddRestaurants extends React.Component {
   render() {
     let fRef = null;
     return (
-        <Grid container centered>
+        <Grid container centered id="add-restaurant-page">
           <Grid.Column>
             <Header as="h2" textAlign="center">Add Your Restaurant</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField name='name'/>
-                <TextField name='address'/>
-                <TextField name='image'/>
-                <TextField name='serviceDays'/>
-                <TextField name='serviceHours'/>
-                <LongTextField name='description'/>
-                <SubmitField value='Submit'/>
+                <TextField id="restaurant-field-name" name='name'/>
+                <TextField id="restaurant-field-address" name='address'/>
+                <TextField id="restaurant-field-image" name='image'/>
+                <TextField id="restaurant-field-days" name='serviceDays'/>
+                <TextField id="restaurant-field-hours" name='serviceHours'/>
+                <LongTextField id="restaurant-field-description" name='description'/>
+                <SubmitField id="restaurant-field-submit" value='Submit'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>

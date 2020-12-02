@@ -26,7 +26,7 @@ class Profile extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
+        <Container id="profile-page">
           <Header as="h2" textAlign="center">My Profile</Header>
           <Divider horizontal>
             <Header as='h3'>
