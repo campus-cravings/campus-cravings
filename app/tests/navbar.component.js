@@ -61,6 +61,10 @@ class NavBar {
   async gotoAddRestaurtantPage(testController) {
     await testController.click('#navbar-add-restaurant');
   }
+
+  async gotoTopPicksPage(testController) {
+    await testController.click('#navbar-top-picks');
+  }
 }
 
 export const navBar = new NavBar();

@@ -7,6 +7,7 @@ import { listFavoritesPage } from './listfavorites.page';
 import { profilePage } from './profile.page';
 import { navBar } from './navbar.component';
 import { addRestaurantPage } from './addrestaurant.page';
+import { topPicksPage } from './toppicks.page';
 
 /* global fixture:false, test:false */
 
@@ -49,4 +50,6 @@ test('Test the pages in the navbar', async (testController) => {
   await listFavoritesPage.isDisplayed(testController);
   await navBar.gotoProfilePage(testController);
   await profilePage.isDisplayed(testController);
+  await navBar.gotoTopPicksPage(testController);
+  await topPicksPage.isDisplayed(testController);
 });
