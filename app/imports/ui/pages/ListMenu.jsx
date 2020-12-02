@@ -19,7 +19,7 @@ class ListRestaurants extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
+        <Container id="listmenu-page">
           <Header as="h2" textAlign="center">Menu</Header>
           <Card.Group centered>{this.props.restaurants.map((restaurants, index) => <Menu
               key={index}
