@@ -10,8 +10,7 @@ import Landing from '../pages/Landing';
 import ListRestaurants from '../pages/ListRestaurants';
 import ListMenu from '../pages/ListMenu';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
+import AddRestaurants from '../pages/AddRestaurants';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -20,6 +19,8 @@ import Profile from '../pages/Profile';
 import UserHome from '../pages/UserHome';
 import AdminHome from '../pages/AdminHome';
 import VendorHome from '../pages/VendorHome';
+import ListFavorites from '../pages/ListFavorites';
+import EditRestaurants from '../pages/EditRestaurants';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -35,10 +36,12 @@ class App extends React.Component {
               <ProtectedRoute path="/profile" component={Profile}/>
               <ProtectedRoute path="/vendor" component={ListRestaurants}/>
               <ProtectedRoute path="/menu" component={ListMenu}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
+              <ProtectedRoute path="/fav" component={ListFavorites}/>
+              <VendorProtectedRoute path="/add" component={AddRestaurants}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
+              <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <AdminProtectedRoute path="/adminhome" component={AdminHome}/>
               <ProtectedRoute path="/signout" component={Signout}/>

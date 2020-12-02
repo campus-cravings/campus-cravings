@@ -3,20 +3,16 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Encapsulates state and variable values for this collection. */
-class MenuItemsCollection {
+class PrefsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'MenuItemsCollection';
+    this.name = 'PrefsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      name: String,
-      type: String,
-      ethnicity: String,
-      vegan: Boolean,
-      available: Boolean,
-      restaurant: String,
+      pref: String,
+      owner: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
@@ -26,4 +22,4 @@ class MenuItemsCollection {
   }
 }
 
-export const MenuItems = new MenuItemsCollection();
+export const Prefs = new PrefsCollection();

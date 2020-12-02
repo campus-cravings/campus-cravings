@@ -1,13 +1,13 @@
 import React from 'react';
-import { Card, Image, List } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import MenuItem from './MenuItem';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class Menu extends React.Component {
+class Favorite extends React.Component {
   render() {
     const RestaurantInfo = this.props.restaurant;
+    const menuItemInfo = this.props.menuItem;
     return (
         <Card>
           <Card.Content>
@@ -16,11 +16,8 @@ class Menu extends React.Component {
                 size='mini'
                 src={RestaurantInfo.image}
             />
-            <Card.Header>{RestaurantInfo.name}</Card.Header>
-            <Card.Meta>Menu</Card.Meta>
-          </Card.Content>
-          <Card.Content extra>
-            <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
+            <Card.Header>{menuItemInfo.name}</Card.Header>
+            <Card.Meta>{RestaurantInfo.name}</Card.Meta>
           </Card.Content>
         </Card>
     );
@@ -28,10 +25,10 @@ class Menu extends React.Component {
 }
 
 /** Require a document to be passed to this component. */
-Menu.propTypes = {
+Favorite.propTypes = {
   restaurant: PropTypes.object.isRequired,
-  menuItem: PropTypes.array.isRequired,
+  menuItem: PropTypes.object.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
-export default withRouter(Menu);
+export default withRouter(Favorite);
