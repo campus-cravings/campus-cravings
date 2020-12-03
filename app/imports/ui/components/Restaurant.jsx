@@ -5,7 +5,6 @@ import { NavLink, withRouter, Link } from 'react-router-dom';
 
 class Restaurant extends React.Component {
   render() {
-    const RestaurantInfo = this.props.restaurant;
     return (
         <Card>
           <Image src={RestaurantInfo.image} wrapped ui={false} />
