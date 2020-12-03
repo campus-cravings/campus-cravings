@@ -6,13 +6,6 @@
     { "email": "bob@foo.com", "password": "changeme" }
   ],
 
-  "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
-  ],
-
   "defaultRestaurants": [
     {"name": "Panda Express", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "../images/panda-express.jpg", "serviceDays": "Monday – Friday", "serviceHours": "10:30am – 2:00pm", "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp." },
     {"name": "L&L Hawaiian Barbecue", "address": "2560 Mccarthy Mall, Manoa, Honolulu, HI", "image": "../images/L&L.png", "serviceDays": "Monday – Friday", "serviceHours": "10:30am – 2:00pm", "description": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L’s famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available." }
