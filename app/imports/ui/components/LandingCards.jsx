@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, Card, Container } from 'semantic-ui-react';
+import { Image, Card, Container, Menu } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
 class LandingCards extends React.Component {
