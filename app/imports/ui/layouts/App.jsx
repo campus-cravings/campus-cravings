@@ -9,7 +9,6 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListRestaurants from '../pages/ListRestaurants';
 import ListMenu from '../pages/ListMenu';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddRestaurants from '../pages/AddRestaurants';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -43,7 +42,6 @@ class App extends React.Component {
               <ProtectedRoute path="/userhome" component={UserHome}/>
               <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
               <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <AdminProtectedRoute path="/adminhome" component={AdminHome}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
