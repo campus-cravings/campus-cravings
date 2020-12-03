@@ -57,7 +57,6 @@ class MenuItem extends React.Component {
       <List.Item>
         <Button circular basic color={color} icon='star' onClick={() => this.handleClick(this.props.menuItem.name)} />
         {this.props.menuItem.name}
-        {this.props.menuItem.vegan ? (<Icon name='leaf' color='green'/>) : ''}
       </List.Item>
     );
   }
