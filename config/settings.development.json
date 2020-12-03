@@ -21,11 +21,5 @@
     { "name": "Shrimp Curry", "type": "entree", "ethnicity": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" }
   ],
 
-  "defaultFavorites": [
-    { "food": "Orange Chicken", "owner": "john@foo.com" },
-    { "food": "Beijing Beef", "owner": "john@foo.com" },
-    { "food": "Mushroom Chicken", "owner": "john@foo.com" },
-    { "food": "BBQ Chicken", "owner": "bob@foo.com" }
-  ],
   "loadAssetsFile": "true"
 }
