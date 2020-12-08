@@ -4,6 +4,7 @@ import { Restaurants } from '../../api/restaurant/Restaurant';
 import { Favorites } from '../../api/favorite/Favorite';
 import { MenuItems } from '../../api/menuItem/menuItem';
 import { Prefs } from '../../api/pref/Prefs';
+import { Featureds } from '../../api/featured/Featured';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -33,6 +34,13 @@ Meteor.publish(Favorites.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Favorites.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
+Meteor.publish(Featureds.userPublicationName, function () {
+  if (this.userId) {
+    return Featureds.collection.find();
   }
   return this.ready();
 });

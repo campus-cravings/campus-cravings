@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Card, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the admin home page. */
 class AdminHomeCards extends React.Component {
@@ -9,7 +10,7 @@ class AdminHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/vendor">
                 <Image src='../images/cc-adminhome-accounts.png' alt='adminhome-accounts-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Manage accounts</Card.Header>
@@ -18,7 +19,7 @@ class AdminHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/profile">
                 <Image src='../images/cc-adminhome-tools.png' alt='adminhome-tools-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Tools at your disposal</Card.Header>

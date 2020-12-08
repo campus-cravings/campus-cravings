@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Restaurants } from '../../api/restaurant/Restaurant';
 import { MenuItems } from '../../api/menuItem/menuItem';
 import { Favorites } from '../../api/favorite/Favorite';
+import { Featureds } from '../../api/featured/Featured';
 
 /* eslint-disable no-console */
 
@@ -19,6 +20,11 @@ function addMenuItem(data) {
 function addFavorites(data) {
   console.log(`  Adding: ${data.food} `);
   Favorites.collection.insert(data);
+}
+
+function addFeatured(data) {
+  console.log(`  Adding: ${data.name} `);
+  Featureds.collection.insert(data);
 }
 
 /** Initialize the collection if empty. */
@@ -40,6 +46,13 @@ if (Favorites.collection.find().count() === 0) {
   if (Meteor.settings.defaultFavorites) {
     console.log('Creating default favorites.');
     Meteor.settings.defaultFavorites.map(data => addFavorites(data));
+  }
+}
+
+if (Featureds.collection.find().count() === 0) {
+  if (Meteor.settings.defaultFeatureds) {
+    console.log('Creating default restaurants.');
+    Meteor.settings.defaultFeatureds.map(data => addFeatured(data));
   }
 }
 
