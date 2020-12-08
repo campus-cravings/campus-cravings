@@ -8,22 +8,6 @@ import { Favorites } from '../../api/favorite/Favorite';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class MenuItem extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      fav: false,
-    };
-  }
-
-  defaultState() {
-    if (Favorites.collection.find({ food: this.props.menuItem.name }).count() === 1) {
-      this.setState({ fav: true });
-    } else {
-      this.setState({ fav: false });
-    }
-  }
-
   handleClick(name) {
     if (Favorites.collection.find({ food: name }).count() === 0) {
       const currentUser = Meteor.user();
@@ -52,7 +36,7 @@ class MenuItem extends React.Component {
   }
 
   render() {
-    const color = this.state.fav ? 'yellow' : 'grey';
+    const color = Favorites.collection.find({ food: this.props.menuItem.name }).count() === 1 ? 'yellow' : 'grey';
     return (
       <List.Item>
         <Button circular basic color={color} icon='star' onClick={() => this.handleClick(this.props.menuItem.name)} />

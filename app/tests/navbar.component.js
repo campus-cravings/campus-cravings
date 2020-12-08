@@ -61,6 +61,29 @@ class NavBar {
   async gotoAddRestaurtantPage(testController) {
     await testController.click('#navbar-add-restaurant');
   }
+
+  async gotoTopPicksPage(testController) {
+    await testController.click('#navbar-top-picks');
+  }
+  /** Go to the user home page. */
+  async gotoUserHomePage(testController) {
+    await testController.click('#navbar-user-home');
+  }
+
+  /** Go to the today's top picks page. */
+  async gotoTopPicksPage(testController) {
+    await testController.click('#navbar-top-picks');
+  }
+
+  /** Go to the vendor home page. */
+  async gotoVendorHomePage(testController) {
+    await testController.click('#navbar-vendor-home');
+  }
+
+  /** Go to the admin home page. */
+  async gotoAdminHomePage(testController) {
+    await testController.click('#navbar-admin-home');
+  }
 }
 
 export const navBar = new NavBar();
