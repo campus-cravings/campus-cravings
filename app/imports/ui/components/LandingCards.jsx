@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Card, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
 class LandingCards extends React.Component {
@@ -9,7 +10,7 @@ class LandingCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/featuredpicks">
                 <Image src='../images/cc-landing-buffet.png' alt='landing-buffet-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Top Picks</Card.Header>
@@ -18,7 +19,7 @@ class LandingCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/vendor">
                 <Image src='../images/cc-landing-map.png' alt='landing-map-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Currently Available</Card.Header>
@@ -28,7 +29,7 @@ class LandingCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/profile">
                 <Image src='../images/cc-landing-crepe.png' alt='landing-crepe-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Preferred Dishes</Card.Header>

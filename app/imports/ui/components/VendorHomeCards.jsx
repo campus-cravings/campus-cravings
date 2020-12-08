@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Card, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the vendor home page. */
 class VendorHomeCards extends React.Component {
@@ -9,7 +10,7 @@ class VendorHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/add">
                 <Image src='../images/cc-vendorhome-menu.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Change it up</Card.Header>
@@ -18,7 +19,7 @@ class VendorHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card href='#'>
+              <Card as={NavLink} activeClassName="active" exact to="/featuredpicks">
                 <Image src='../images/cc-vendorhome-stars.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Dish of the day</Card.Header>
