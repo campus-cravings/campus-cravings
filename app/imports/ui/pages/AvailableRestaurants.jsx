@@ -16,8 +16,8 @@ class AvailableRestaurants extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    let d = new Date();
-    let available = _.find(restaurants, function(input){ return input.})
+    const d = new Date();
+    console.log(d.getDay());
     return (
         <Container id="availablerestaurants-page">
           <Header as="h2" textAlign="center">Whats Open Now</Header>
