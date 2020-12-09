@@ -51,7 +51,7 @@ if (Favorites.collection.find().count() === 0) {
 
 if (Featureds.collection.find().count() === 0) {
   if (Meteor.settings.defaultFeatureds) {
-    console.log('Creating default restaurants.');
+    console.log('Creating default featureds.');
     Meteor.settings.defaultFeatureds.map(data => addFeatured(data));
   }
 }
