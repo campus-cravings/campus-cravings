@@ -15,7 +15,7 @@ function isOpen(restaurant, date) {
   const times = restaurant.serviceHours.match(/\d+/g).map(Number);
   /** Determine if restaurant closed and if its not return that its open */
   /** Restaurant is hour(s) away from being open */
-  if (times[0] < date.getHours()) {
+  if (date.getHours() < times[0]) {
     return false;
   }
   /** Restaurant is minute(s) away from being open */
@@ -23,7 +23,7 @@ function isOpen(restaurant, date) {
     return false;
   }
   /** Restaurant closed hour(s) ago */
-  if ((times[2] + 12) < date.getHours()) {
+  if (date.getHours() > (times[2] + 12) ) {
     return false;
   }
   /** Restaurant closed minutes(s) ago */
