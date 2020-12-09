@@ -21,16 +21,16 @@ const preferences = [
     value: 'vegan',
   },
   {
-    label: 'Vegetarian',
-    value: 'vegetarian',
+    label: 'Indian',
+    value: 'indian',
   },
   {
-    label: 'Gluten-Free',
-    value: 'gluten-free',
+    label: 'French',
+    value: 'french',
   },
   {
-    label: 'Nut-Free',
-    value: 'nut-free',
+    label: 'Korean',
+    value: 'korean',
   },
   {
     label: 'Hawaiian',
@@ -41,12 +41,16 @@ const preferences = [
     value: 'chinese',
   },
   {
-    label: 'Food-Truck',
-    value: 'food-truck',
+    label: 'Entree',
+    value: 'entree',
   },
   {
-    label: 'Coffee',
-    value: 'coffee',
+    label: 'Side',
+    value: 'side',
+  },
+  {
+    label: 'Drink',
+    value: 'drink',
   },
 ];
 

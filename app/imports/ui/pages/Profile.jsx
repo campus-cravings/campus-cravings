@@ -1,8 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Label, Icon, Divider } from 'semantic-ui-react';
+import { Container, Header, Loader, Label, Icon, Divider, Button, Grid, Segment } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Pref from '../components/Pref';
 import { Prefs } from '../../api/pref/Prefs';
 import AddPref from '../components/AddPref';
@@ -71,6 +72,13 @@ class Profile extends React.Component {
             <Form.Button>Add</Form.Button>
           </Form>
           */}
+          <Segment basic>
+            <Grid>
+              <Grid.Column textAlign="center">
+                <Button as={Link} to='/fav'>Go To Smart Menu</Button>
+              </Grid.Column>
+            </Grid>
+          </Segment>
         </Container>
     );
   }
