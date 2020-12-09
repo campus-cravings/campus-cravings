@@ -6,6 +6,33 @@ import PropTypes from 'prop-types';
 import { Restaurants } from '../../api/restaurant/Restaurant';
 import Restaurant from '../components/Restaurant';
 
+function isOpen(restaurant, date) {
+  /** All restaurants are closed on weekends */
+  if (date.getDay() === 6 || date.getDay() === 0) {
+    return false;
+  }
+  /** Parse serviceHours string and extract hours and min for opening and closing */
+  const times = restaurant.serviceHours.match(/\d+/g).map(Number);
+  /** Determine if restaurant closed and if its not return that its open */
+  /** Restaurant is hour(s) away from being open */
+  if (times[0] < date.getHours()) {
+    return false;
+  }
+  /** Restaurant is minute(s) away from being open */
+  if (times[0] === date.getHours() && times[1] > date.getMinutes()) {
+    return false;
+  }
+  /** Restaurant closed hour(s) ago */
+  if ((times[2] + 12) < date.getHours()) {
+    return false;
+  }
+  /** Restaurant closed minutes(s) ago */
+  if ((times[2] + 12) === date.getHours() && times[3] > date.getMinutes()) {
+    return false;
+  }
+  return true;
+}
+
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class AvailableRestaurants extends React.Component {
 
@@ -17,11 +44,17 @@ class AvailableRestaurants extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     const d = new Date();
-    console.log(d.getDay());
+    const available = []; /** if restaurant is both open and not closed */
+    for (let i = 0; i < this.props.restaurants.length; i++) {
+      if (isOpen(this.props.restaurants[i], d)) {
+        available.push(this.props.restaurants[i]);
+      }
+    }
+
     return (
         <Container id="availablerestaurants-page">
           <Header as="h2" textAlign="center">Whats Open Now</Header>
-          <Card.Group centered>{this.props.restaurants.map((restaurants, index) => <Restaurant
+          <Card.Group centered>{available.map((restaurants, index) => <Restaurant
               key={index}
               restaurant={restaurants}/>)}
           </Card.Group>
