@@ -1,34 +1,56 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import { Card, Header, Image } from 'semantic-ui-react';
+import { Accordion, Card, Icon, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { NavLink, withRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 
 class Restaurant extends React.Component {
+  state = { activeIndex: -1 }
+
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  }
+
   render() {
     const RestaurantInfo = this.props.restaurant;
+    const { activeIndex } = this.state;
     return (
         <Card>
-          <Image src={RestaurantInfo.image} wrapped ui={false} />
+          <Image large src={RestaurantInfo.image} wrapped ui={false} />
           <Card.Content>
             <Card.Header>{RestaurantInfo.name}</Card.Header>
             <Card.Meta>{RestaurantInfo.address}</Card.Meta>
             <Card.Meta>{RestaurantInfo.serviceDays}</Card.Meta>
             <Card.Meta>{RestaurantInfo.serviceHours}</Card.Meta>
             <Card.Description>
-              {RestaurantInfo.description}
+              <Accordion>
+                <Accordion.Title
+                    active={activeIndex === 0}
+                    index={0}
+                    onClick={this.handleClick}
+                >
+                  <Icon name='dropdown' />
+                  Click to see description
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 0}>
+                  {RestaurantInfo.description}
+                </Accordion.Content>
+              </Accordion>
             </Card.Description>
           </Card.Content>
-          <Card.Content extra>
-            <Header as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Header>
-          </Card.Content>
-          <Card.Content extra>
+          {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (<Card.Content extra>
             <Link to={`/edit/${this.props.restaurant._id}`}>Edit</Link>
-          </Card.Content>
+          </Card.Content>) : ''}
         </Card>
     );
   }
 }
-// <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
+
 /** Require a document to be passed to this component. */
 Restaurant.propTypes = {
   restaurant: PropTypes.object.isRequired,
