@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import { Accordion, Card, Header, Icon, Image, List } from 'semantic-ui-react';
+import { Accordion, Card, Icon, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { NavLink, withRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { Roles } from 'meteor/alanning:roles';
 
 class Restaurant extends React.Component {
