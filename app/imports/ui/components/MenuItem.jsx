@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import { List, Icon, Button } from 'semantic-ui-react';
+import { List, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import swal from 'sweetalert';
@@ -41,7 +41,6 @@ class MenuItem extends React.Component {
       <List.Item>
         <Button circular basic color={color} icon='star' onClick={() => this.handleClick(this.props.menuItem.name)} />
         {this.props.menuItem.name}
-        {this.props.menuItem.vegan ? (<Icon name='leaf' color='green'/>) : ''}
       </List.Item>
     );
   }

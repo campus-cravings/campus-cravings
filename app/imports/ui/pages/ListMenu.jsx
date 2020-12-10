@@ -1,15 +1,35 @@
 import React from 'react';
+import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import SimpleSchema from 'simpl-schema';
+import { Segment, Container, Header, Loader, Card } from 'semantic-ui-react';
+import { AutoForm, SubmitField } from 'uniforms-semantic';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { _ } from 'meteor/underscore';
 import { Restaurants } from '../../api/restaurant/Restaurant';
 import { MenuItems } from '../../api/menuItem/menuItem';
 import Menu from '../components/Menu';
 import { Favorites } from '../../api/favorite/Favorite';
+import MultiSelectField from '../forms/controllers/MultiSelectField';
+
+/** Create a schema to specify the structure of the data to appear in the form. */
+const makeSchema = (allRestaurants) => new SimpleSchema({
+  restaurants: { type: Array, label: 'Restaurants', optional: true },
+  'restaurants.$': { type: String, allowedValues: allRestaurants },
+});
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListRestaurants extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { restaurants: [] };
+  }
+
+  submit(data) {
+    this.setState({ restaurants: data.restaurants || [] });
+  }
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -18,10 +38,20 @@ class ListRestaurants extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const allRestaurants = _.pluck(Restaurants.collection.find().fetch(), 'name');
+    const formSchema = makeSchema(allRestaurants);
+    const bridge = new SimpleSchema2Bridge(formSchema);
+    const restaurantList = Restaurants.collection.find({ name: { $in: this.state.restaurants } });
     return (
         <Container id="listmenu-page">
           <Header as="h2" textAlign="center">Menu</Header>
-          <Card.Group centered>{this.props.restaurants.map((restaurants, index) => <Menu
+          <AutoForm style={{ paddingBottom: '20px' }} schema={bridge} onSubmit={data => this.submit(data)} >
+            <Segment>
+              <MultiSelectField id='restaurants' name='restaurants' showInlineError={true} placeholder={'Restaurants'}/>
+              <SubmitField id='submit' value='Submit'/>
+            </Segment>
+          </AutoForm>
+          <Card.Group style={{ paddingTop: '10px', paddingBottom: '20px' }} centered>{restaurantList.map((restaurants, index) => <Menu
               key={index}
               restaurant={restaurants}
               menuItem={this.props.menuItem.filter(item => (item.restaurant === restaurants.name))}/>)}
