@@ -21,9 +21,11 @@ class NavBar extends React.Component {
           {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
               <Menu.Item id='navbar-vendor-home' as={NavLink} activeClassName="active" exact to="/vendorhome" key='vendorhome'>Vendor Home</Menu.Item>
           ) : ''}
+          {this.props.currentUser && !Roles.userIsInRole(Meteor.userId(), 'vendor') && !Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+              <Menu.Item id='navbar-user-home' as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'>Home</Menu.Item>
+          ) : ''}
           {this.props.currentUser ? (
-              [<Menu.Item id='navbar-user-home' as={NavLink} activeClassName="active" exact to="/userhome" key='userhome'>Home</Menu.Item>,
-                <Menu.Item id="navbar-favorites" as={NavLink} activeClassName="active" exact to="/fav" key='fav'>Favorites & Smart Menu</Menu.Item>,
+              [<Menu.Item id="navbar-favorites" as={NavLink} activeClassName="active" exact to="/fav" key='fav'>Favorites & Smart Menu</Menu.Item>,
                 <Menu.Item id="navbar-list-restaurants" as={NavLink} activeClassName="active" exact to="/vendor" key='vendor'>List Restaurants</Menu.Item>,
                 <Menu.Item id="navbar-list-menu" as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Menu.Item>,
                 <Menu.Item id="navbar-list-featureds" as={NavLink} activeClassName="active" exact to="/featuredpicks" key='featuredpicks'>Featured</Menu.Item>]
