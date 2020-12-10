@@ -1,21 +1,45 @@
 import React from 'react';
-import { Card, Header, Image } from 'semantic-ui-react';
+import { Accordion, Card, Header, Icon, Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { NavLink, withRouter, Link } from 'react-router-dom';
+import MenuItem from './MenuItem';
 
 class Restaurant extends React.Component {
+  state = { activeIndex: -1 }
+
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  }
+
   render() {
     const RestaurantInfo = this.props.restaurant;
+    const { activeIndex } = this.state;
     return (
         <Card>
-          <Image src={RestaurantInfo.image} wrapped ui={false} />
+          <Image large src={RestaurantInfo.image} wrapped ui={false} />
           <Card.Content>
             <Card.Header>{RestaurantInfo.name}</Card.Header>
             <Card.Meta>{RestaurantInfo.address}</Card.Meta>
             <Card.Meta>{RestaurantInfo.serviceDays}</Card.Meta>
             <Card.Meta>{RestaurantInfo.serviceHours}</Card.Meta>
             <Card.Description>
-              {RestaurantInfo.description}
+              <Accordion>
+                <Accordion.Title
+                    active={activeIndex === 0}
+                    index={0}
+                    onClick={this.handleClick}
+                >
+                  <Icon name='dropdown' />
+                  Click to see description
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 0}>
+                  {RestaurantInfo.description}
+                </Accordion.Content>
+              </Accordion>
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
