@@ -21,5 +21,17 @@
     { "name": "Shrimp Curry", "type": "entree", "ethnicity": "Hawaiian", "vegan": "FALSE", "available": "TRUE", "restaurant": "L&L Hawaiian Barbecue" }
   ],
 
+  "defaultFavorites": [
+    { "food": "Orange Chicken", "owner": "john@foo.com" },
+    { "food": "Beijing Beef", "owner": "john@foo.com" },
+    { "food": "Mushroom Chicken", "owner": "john@foo.com" },
+    { "food": "BBQ Chicken", "owner": "bob@foo.com" }
+  ],
+
+  "defaultFeatureds": [
+    { "name": "Peppermint Mocha", "image": "../images/cc-toppicks-peppermint.png", "description": "Our all-star festive Peppermint Mocha brightens the holidays: signature Espresso Roast combines with steamed milk, sweet mocha sauce, peppermint-flavored syrup, topped with whipped cream and dark chocolate curls." },
+    { "name": "Loco Moco", "image": "../images/cc-toppicks-locomoco.png", "description": "Savory hamburger patties over rice, topped with brown gravy and 2 fresh fried eggs." },
+    { "name": "Orange Chicken", "image": "../images/cc-toppicks-orangechicken.png", "description": "Our signature dish. Crispy chicken wok-tossed in a sweet and spicy orange sauce." }
+  ],
   "loadAssetsFile": "true"
 }
