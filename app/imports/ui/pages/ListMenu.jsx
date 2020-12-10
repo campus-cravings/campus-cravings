@@ -47,7 +47,7 @@ class ListRestaurants extends React.Component {
           <Header as="h2" textAlign="center">Menu</Header>
           <AutoForm style={{ paddingBottom: '20px' }} schema={bridge} onSubmit={data => this.submit(data)} >
             <Segment>
-              <MultiSelectField id='restaurants' name='restaurants' showInlineError={true} placeholder={'Restaurants'}/>
+              <MultiSelectField id='restaurants' name='restaurants' showInlineError={true} placeholder={'Pick a Restaurant'}/>
               <SubmitField id='submit' value='Submit'/>
             </Segment>
           </AutoForm>
