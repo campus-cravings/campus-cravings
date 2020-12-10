@@ -1,8 +1,9 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { Accordion, Card, Header, Icon, Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { NavLink, withRouter, Link } from 'react-router-dom';
-import MenuItem from './MenuItem';
+import { Roles } from 'meteor/alanning:roles';
 
 class Restaurant extends React.Component {
   state = { activeIndex: -1 }
@@ -42,17 +43,14 @@ class Restaurant extends React.Component {
               </Accordion>
             </Card.Description>
           </Card.Content>
-          <Card.Content extra>
-            <Header as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menu</Header>
-          </Card.Content>
-          <Card.Content extra>
+          {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (<Card.Content extra>
             <Link to={`/edit/${this.props.restaurant._id}`}>Edit</Link>
-          </Card.Content>
+          </Card.Content>) : ''}
         </Card>
     );
   }
 }
-// <List>{this.props.menuItem.map((menu, index) => <MenuItem key={index} menuItem={menu}/>)}</List>
+
 /** Require a document to be passed to this component. */
 Restaurant.propTypes = {
   restaurant: PropTypes.object.isRequired,
