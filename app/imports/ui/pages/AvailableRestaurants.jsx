@@ -23,7 +23,7 @@ function isOpen(restaurant, date) {
     return false;
   }
   /** Restaurant closed hour(s) ago */
-  if (date.getHours() > (times[2] + 12) ) {
+  if (date.getHours() > (times[2] + 12)) {
     return false;
   }
   /** Restaurant closed minutes(s) ago */

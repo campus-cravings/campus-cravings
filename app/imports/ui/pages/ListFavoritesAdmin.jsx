@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card, Divider } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-//import { Link } from 'react-router-dom';
 import { Restaurants } from '../../api/restaurant/Restaurant';
 import { MenuItems } from '../../api/menuItem/menuItem';
 import { Favorites } from '../../api/favorite/Favorite';

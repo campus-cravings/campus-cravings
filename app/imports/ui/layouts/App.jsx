@@ -22,7 +22,6 @@ import ListFavorites from '../pages/ListFavorites';
 import EditRestaurants from '../pages/EditRestaurants';
 import ListFeatureds from '../pages/ListFeatureds';
 import ListFavoritesAdmin from '../pages/ListFavoritesAdmin';
-import TodaysTopPicks from '../pages/TodaysTopPicks';
 import AvailableRestaurants from '../pages/AvailableRestaurants';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -40,7 +39,6 @@ class App extends React.Component {
               <ProtectedRoute path="/featuredpicks" component={ListFeatureds}/>
               <ProtectedRoute path="/vendor" component={ListRestaurants}/>
               <ProtectedRoute path="/menu" component={ListMenu}/>
-              <ProtectedRoute path="/todaystoppicks" component={TodaysTopPicks}/>
               <ProtectedRoute path="/fav" component={ListFavorites}/>
               <ProtectedRoute path="/avail" component={AvailableRestaurants}/>
               <VendorProtectedRoute path="/add" component={AddRestaurants}/>
