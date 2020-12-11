@@ -18,7 +18,7 @@ class FavoriteCollection {
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
     this.userPublicationName = `${this.name}.publication.user`;
-    // this.adminPublicationName = `${this.name}.publication.admin`;
+    this.adminPublicationName = `${this.name}.publication.admin`;
   }
 }
 
