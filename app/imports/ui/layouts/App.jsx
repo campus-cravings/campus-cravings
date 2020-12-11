@@ -21,6 +21,7 @@ import VendorHome from '../pages/VendorHome';
 import ListFavorites from '../pages/ListFavorites';
 import EditRestaurants from '../pages/EditRestaurants';
 import ListFeatureds from '../pages/ListFeatureds';
+import ListFavoritesAdmin from '../pages/ListFavoritesAdmin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -43,6 +44,7 @@ class App extends React.Component {
               <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
               <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>
               <AdminProtectedRoute path="/adminhome" component={AdminHome}/>
+              <AdminProtectedRoute path="/adminfav" component={ListFavoritesAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
