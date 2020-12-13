@@ -19,7 +19,7 @@ class VendorHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/featuredpicks">
+              <Card as={NavLink} activeClassName="active" exact to="/addfeatured">
                 <Image src='../images/cc-vendorhome-stars.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Dish of the day</Card.Header>

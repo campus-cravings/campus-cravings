@@ -30,12 +30,12 @@ class UserHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/vendor">
+              <Card as={NavLink} activeClassName="active" exact to="/avail">
                 <Image src='../images/cc-userhome-musubi.png' alt='userhome-musubi-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Stop Wandering</Card.Header>
                   <Card.Description>
-                    Check out the restaurants around campus in just one site.
+                    Check out open restaurants around campus in just one site.
                   </Card.Description>
                 </Card.Content>
               </Card>

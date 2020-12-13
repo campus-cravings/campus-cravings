@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Container, Image } from 'semantic-ui-react';
+import { Card, Container, Image, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 class Featured extends React.Component {
   render() {
@@ -9,7 +9,6 @@ class Featured extends React.Component {
     return (
         <Container>
           <div className="featured-cards">
-            <Card.Group itemsPerRow={1}>
             <Card fluid>
               <Image src={FeaturedInfo.image} wrapped ui={false}/>
               <Card.Content>
@@ -18,8 +17,10 @@ class Featured extends React.Component {
                   {FeaturedInfo.description}
                 </Card.Description>
               </Card.Content>
+              <Card.Content extra>
+                <Button as={NavLink} activeClassName="active" exact to="/vendor">Get it at {FeaturedInfo.place}</Button>
+              </Card.Content>
             </Card>
-          </Card.Group>
           </div>
         </Container>
     );

@@ -23,6 +23,7 @@ import EditRestaurants from '../pages/EditRestaurants';
 import ListFeatureds from '../pages/ListFeatureds';
 import ListFavoritesAdmin from '../pages/ListFavoritesAdmin';
 import AvailableRestaurants from '../pages/AvailableRestaurants';
+import AddFeatureds from '../pages/AddFeatureds';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -42,6 +43,7 @@ class App extends React.Component {
               <ProtectedRoute path="/fav" component={ListFavorites}/>
               <ProtectedRoute path="/avail" component={AvailableRestaurants}/>
               <VendorProtectedRoute path="/add" component={AddRestaurants}/>
+              <VendorProtectedRoute path="/addfeatured" component={AddFeatureds}/>
               <ProtectedRoute path="/userhome" component={UserHome}/>
               <VendorProtectedRoute path="/vendorhome" component={VendorHome}/>
               <VendorProtectedRoute path="/edit/:_id" component={EditRestaurants}/>

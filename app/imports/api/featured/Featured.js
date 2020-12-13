@@ -12,6 +12,7 @@ class FeaturedsCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       name: String,
+      place: String,
       image: String,
       description: String,
     }, { tracker: Tracker });
