@@ -29,9 +29,10 @@
   ],
 
   "defaultFeatureds": [
-    { "name": "Peppermint Mocha", "image": "../images/cc-toppicks-peppermint.png", "description": "Our all-star festive Peppermint Mocha brightens the holidays: signature Espresso Roast combines with steamed milk, sweet mocha sauce, peppermint-flavored syrup, topped with whipped cream and dark chocolate curls." },
-    { "name": "Loco Moco", "image": "../images/cc-toppicks-locomoco.png", "description": "Savory hamburger patties over rice, topped with brown gravy and 2 fresh fried eggs." },
-    { "name": "Orange Chicken", "image": "../images/cc-toppicks-orangechicken.png", "description": "Our signature dish. Crispy chicken wok-tossed in a sweet and spicy orange sauce." }
+    { "name": "Peppermint Mocha", "place": "Starbucks", "image": "../images/cc-toppicks-peppermint.png", "description": "Our all-star festive Peppermint Mocha brightens the holidays: signature Espresso Roast combines with steamed milk, sweet mocha sauce, peppermint-flavored syrup, topped with whipped cream and dark chocolate curls." },
+    { "name": "Loco Moco", "place": "L&L Hawaiian Barbecue", "image": "../images/cc-toppicks-locomoco.png", "description": "Savory hamburger patties over rice, topped with brown gravy and 2 fresh fried eggs." },
+    { "name": "Orange Chicken", "place": "Panda Express", "image": "../images/cc-toppicks-orangechicken.png", "description": "Our signature dish. Crispy chicken wok-tossed in a sweet and spicy orange sauce." },
+    { "name": "Breakfast of Champions Crepe", "place": "Le Crêpe Café", "image": "../images/cc-toppicks-breakfastcrepe.png", "description": "Includes egg, cheese, turkey bacon, mushrooms and organic garlic. With your choice of homemade crepe batter." }
   ],
   "loadAssetsFile": "true"
 }

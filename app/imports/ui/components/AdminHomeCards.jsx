@@ -19,7 +19,7 @@ class AdminHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/profile">
+              <Card as={NavLink} activeClassName="active" exact to="/adminfav">
                 <Image src='../images/cc-adminhome-tools.png' alt='adminhome-tools-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Tools at your disposal</Card.Header>

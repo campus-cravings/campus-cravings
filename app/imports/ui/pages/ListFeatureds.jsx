@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Divider } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Featureds } from '../../api/featured/Featured';
@@ -18,7 +18,11 @@ class ListFeatureds extends React.Component {
   renderPage() {
     return (
         <Container id="listfeatureds-page">
-          <Header as="h2" textAlign="center">Featureds</Header>
+          <Divider horizontal>
+            <Header as='h2'>
+              Featureds
+            </Header>
+          </Divider>
           <Card.Group centered>{this.props.featureds.map((featureds, index) => <Featured
               key={index}
               featured={featureds}/>)}
