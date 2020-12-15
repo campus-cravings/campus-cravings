@@ -10,7 +10,7 @@ class VendorHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card as={NavLink} activeClassName="active" exact to="/add">
+              <Card as={NavLink} activeClassName="active" exact to="/add" id="vendor-card-one">
                 <Image src='../images/cc-vendorhome-menu.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Change it up</Card.Header>
@@ -19,7 +19,7 @@ class VendorHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/addfeatured">
+              <Card as={NavLink} activeClassName="active" exact to="/addfeatured" id="vendor-card-two">
                 <Image src='../images/cc-vendorhome-stars.png' alt='vendorhome-stars-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Dish of the day</Card.Header>

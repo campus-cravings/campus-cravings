@@ -26,21 +26,21 @@ class NavBar extends React.Component {
           ) : ''}
           {this.props.currentUser ? (
               <Menu.Item>
-                <Dropdown item text='Food'>
+                <Dropdown item text='Food' id="food-dropdown">
                   <Dropdown.Menu>
                     <Dropdown.Item id="navbar-favorites" as={NavLink} activeClassName="active" exact to="/fav" key='fav'>Favorites & Smart Menu</Dropdown.Item>
                     <Dropdown.Item id="navbar-featureds" as={NavLink} activeClassName="active" exact to="/featuredpicks" key='featuredpicks'>Featureds</Dropdown.Item>
                     <Dropdown.Item id="navbar-list-menu" as={NavLink} activeClassName="active" exact to="/menu" key='menu'>Menus</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Dropdown item text='Restaurants'>
+                <Dropdown item text='Restaurants' id="restaurants-dropdown">
                   <Dropdown.Menu>
                     <Dropdown.Item id="navbar-available-restaurants" as={NavLink} activeClassName="active" exact to="/avail" key='avail'>What&#39;s Open</Dropdown.Item>
                     <Dropdown.Item id="navbar-list-restaurants" as={NavLink} activeClassName="active" exact to="/vendor" key='vendor'>All Restaurants</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
                 {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
-                      <Dropdown item text='Add'>
+                      <Dropdown item text='Add' id="add-dropdown">
                         <Dropdown.Menu>
                           <Dropdown.Item id="navbar-add-restaurant" as={NavLink} activeClassName="active" exact to="/add"
                                          key='add'>Add Restaurants</Dropdown.Item>
