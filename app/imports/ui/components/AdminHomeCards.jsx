@@ -10,7 +10,7 @@ class AdminHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card as={NavLink} activeClassName="active" exact to="/vendor">
+              <Card as={NavLink} activeClassName="active" exact to="/vendor" id="admin-card-one">
                 <Image src='../images/cc-adminhome-accounts.png' alt='adminhome-accounts-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Manage accounts</Card.Header>
@@ -19,7 +19,7 @@ class AdminHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/adminfav">
+              <Card as={NavLink} activeClassName="active" exact to="/adminfav" id="admin-card-two">
                 <Image src='../images/cc-adminhome-tools.png' alt='adminhome-tools-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Tools at your disposal</Card.Header>

@@ -78,10 +78,10 @@ class AddPref extends React.Component {
     return (
         <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
           <Segment>
-            <SelectField name='pref' label='Preferences' options={preferences} />
+            <SelectField name='pref' label='Preferences' options={preferences} id="add-pref-dropdown"/>
             <ErrorField name="pref"
                          errorMessage="You have to provide at least one preference!"/>
-            <SubmitField value='Submit'/>
+            <SubmitField value='Submit' id="add-pref-submit"/>
               {/* <HiddenField name='owner' value={this.props.owner}/> */}
           </Segment>
         </AutoForm>

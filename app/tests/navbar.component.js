@@ -37,19 +37,28 @@ class NavBar {
     await testController.click('#login-dropdown-sign-up');
   }
 
-  /** Go to the list menu page. */
+  /** Go to the favorites and smart menu page. */
+  async gotoFavoritesPage(testController) {
+    await testController.click('#food-dropdown');
+    await testController.click('#navbar-favorites');
+  }
+
+  /** Go to the featured page. */
+  async gotoFeaturedsPage(testController) {
+    await testController.click('#food-dropdown');
+    await testController.click('#navbar-featureds');
+  }
+
+  /** Go to the select menu page. */
   async gotoListMenuPage(testController) {
+    await testController.click('#food-dropdown');
     await testController.click('#navbar-list-menu');
   }
 
   /** Go to the list restaurants page. */
   async gotoListResaurantsPage(testController) {
+    await testController.click('#restaurants-dropdown');
     await testController.click('#navbar-list-restaurants');
-  }
-
-  /** Go to the favorites page. */
-  async gotoFavoritesPage(testController) {
-    await testController.click('#navbar-favorites');
   }
 
   async gotoProfilePage(testController) {
@@ -59,20 +68,22 @@ class NavBar {
   }
 
   async gotoAddRestaurtantPage(testController) {
+    await testController.click('#add-dropdown');
     await testController.click('#navbar-add-restaurant');
   }
 
+  async gotoAddFeaturedPage(testController) {
+    await testController.click('#add-dropdown');
+    await testController.click('#navbar-add-featured');
+  }
+
   async gotoTopPicksPage(testController) {
     await testController.click('#navbar-top-picks');
   }
+
   /** Go to the user home page. */
   async gotoUserHomePage(testController) {
     await testController.click('#navbar-user-home');
-  }
-
-  /** Go to the today's top picks page. */
-  async gotoTopPicksPage(testController) {
-    await testController.click('#navbar-top-picks');
   }
 
   /** Go to the vendor home page. */
@@ -83,6 +94,11 @@ class NavBar {
   /** Go to the admin home page. */
   async gotoAdminHomePage(testController) {
     await testController.click('#navbar-admin-home');
+  }
+
+  /** Go to the admin favorites page. */
+  async gotoAdminFavoritesPage(testController) {
+    await testController.click('#navbar-admin-fav');
   }
 }
 

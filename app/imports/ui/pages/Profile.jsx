@@ -75,7 +75,7 @@ class Profile extends React.Component {
           <Segment basic>
             <Grid>
               <Grid.Column textAlign="center">
-                <Button as={Link} to='/fav'>Go To Smart Menu</Button>
+                <Button as={Link} to='/fav' id="add-pref-button">Go To Smart Menu</Button>
               </Grid.Column>
             </Grid>
           </Segment>

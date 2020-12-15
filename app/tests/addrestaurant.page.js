@@ -21,6 +21,7 @@ class AddRestaurantPage {
     await testController.typeText('#restaurant-field-hours', '1234 Test Hours');
     await testController.typeText('#restaurant-field-description', '1234 Test Description');
     await testController.click('#restaurant-field-submit');
+    await testController.pressKey('enter');
   }
 }
 

@@ -27,7 +27,7 @@ class ListFavoritesAdmin extends React.Component {
     const fav = this.props.favorites.map(favor => this.props.menuItem.filter(item => (item.name === favor.food)));
     const flat = fav.flat();
     return (
-        <Container id="listfavorites-page">
+        <Container id="listfavorites-admin-page">
           <Divider horizontal>
             <Header as='h2'>
               Popular User Choices

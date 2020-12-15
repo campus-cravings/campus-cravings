@@ -10,7 +10,7 @@ class UserHomeCards extends React.Component {
         <div className="landing-cards">
           <Container>
             <Card.Group centered>
-              <Card as={NavLink} activeClassName="active" exact to="/fav">
+              <Card as={NavLink} activeClassName="active" exact to="/fav" id='user-card-one'>
                 <Image src='../images/cc-userhome-cafe.png' alt='userhome-cafe-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Smart Menu</Card.Header>
@@ -21,7 +21,7 @@ class UserHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/featuredpicks">
+              <Card as={NavLink} activeClassName="active" exact to="/featuredpicks" id='user-card-two'>
                 <Image src='../images/cc-userhome-kebab.png' alt='userhome-kebab-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Try Something New</Card.Header>
@@ -30,7 +30,7 @@ class UserHomeCards extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card as={NavLink} activeClassName="active" exact to="/avail">
+              <Card as={NavLink} activeClassName="active" exact to="/vendor" id='user-card-three'>
                 <Image src='../images/cc-userhome-musubi.png' alt='userhome-musubi-img' wrapped ui={false}/>
                 <Card.Content>
                   <Card.Header>Stop Wandering</Card.Header>

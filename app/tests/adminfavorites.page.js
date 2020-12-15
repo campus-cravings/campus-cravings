@@ -1,18 +1,15 @@
 import { Selector } from 'testcafe';
 
-class ListFavoritesPage {
+class AdminFavoritesPage {
   constructor() {
-    this.pageId = '#listfavorites-page';
+    this.pageId = '#listfavorites-admin-page';
     this.pageSelector = Selector(this.pageId);
   }
 
   /** Asserts that this page is currently displayed. */
   async isDisplayed(testController) {
     await testController.expect(this.pageSelector.exists).ok();
-    await testController.click('#listfavorites-page');
-    await testController.click('#bottom-footer');
-    await testController.wait(1000);
   }
 }
 
-export const listFavoritesPage = new ListFavoritesPage();
+export const adminFavoritesPage = new AdminFavoritesPage();

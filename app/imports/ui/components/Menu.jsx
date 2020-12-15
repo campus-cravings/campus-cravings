@@ -31,7 +31,7 @@ class Menu extends React.Component {
             <Card.Meta>Menu</Card.Meta>
           </Card.Content>
           <Card.Content extra>
-            <Accordion>
+            <Accordion id="click-see-menu">
               <Accordion.Title
                   active={activeIndex === 0}
                   index={0}

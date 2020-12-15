@@ -44,11 +44,11 @@ class AddFeatureds extends React.Component {
             <Header as="h2" textAlign="center">Promote A Dish Or Drink</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField id="restaurant-field-name" name='name'/>
-                <TextField id="restaurant-field-place" name='place'/>
-                <TextField id="restaurant-field-image" name='image'/>
-                <LongTextField id="restaurant-field-description" name='description'/>
-                <SubmitField id="restaurant-field-submit" value='Submit'/>
+                <TextField id="featured-field-name" name='name'/>
+                <TextField id="featured-field-place" name='place'/>
+                <TextField id="featured-field-image" name='image'/>
+                <LongTextField id="featured-field-description" name='description'/>
+                <SubmitField id="featured-field-submit" value='Submit'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>
