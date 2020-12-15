@@ -11,11 +11,6 @@ class NavBar {
     }
   }
 
-  async gotoLandingPage(testController) {
-    await this.ensureLogout(testController);
-    await testController.click('#navbar-landing-page');
-  }
-
   async gotoSigninPage(testController) {
     await this.ensureLogout(testController);
     await testController.click('#login-dropdown');
