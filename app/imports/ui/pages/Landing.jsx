@@ -9,7 +9,7 @@ import LandingCards from '../components/LandingCards';
 class Landing extends React.Component {
   render() {
     return (
-        <div id='landing-page'>
+        <div>
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Redirect to='/adminhome'/>
           ) : ''}
@@ -19,7 +19,7 @@ class Landing extends React.Component {
           {(Meteor.userId() !== null) && !Roles.userIsInRole(Meteor.userId(), 'admin') && !Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
               <Redirect to='/userhome'/>
           ) : ''}
-          <LandingBanner/>
+          <LandingBanner id='landing-page'/>
           <LandingCards/>
         </div>
     );
