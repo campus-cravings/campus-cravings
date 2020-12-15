@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     const menuStyle = { marginBottom: '10px' };
     return (
         <Menu style={menuStyle} attached="top" borderless inverted color='teal'>
-          <Menu.Item as={NavLink} activeClassName="" exact to="/">
+          <Menu.Item id='navbar-landing-page' as={NavLink} activeClassName="" exact to="/">
             <Image className="campus-cravings-logo" src="../images/cc-logo-small.png"/>
           </Menu.Item>
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
