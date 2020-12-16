@@ -62,15 +62,25 @@ class AvailableRestaurants extends React.Component {
       }
     }
 
-    return (
-        <Container id="availablerestaurants-page">
-          <Header as="h2" textAlign="center">Whats Open Now</Header>
-          <Card.Group centered>{available.map((restaurants, index) => <Restaurant
-              key={index}
-              restaurant={restaurants}/>)}
-          </Card.Group>
-        </Container>
-    );
+    if (available.length > 0) {
+      return (
+          <Container id="availablerestaurants-page">
+            <Header as="h2" textAlign="center">Whats Open Now</Header>
+            <Card.Group centered>{available.map((restaurants, index) => <Restaurant
+                key={index}
+                restaurant={restaurants}/>)}
+            </Card.Group>
+          </Container>
+      );
+    }
+    else {
+      return (
+          <Container id="availablerestaurants-page">
+            <Header as="h2" textAlign="center">Whats Open Now</Header>
+            <Header as="h3" textAlign="center" color="red">Closed For The Day!</Header>
+          </Container>
+      );
+    }
   }
 }
 
