@@ -1,4 +1,5 @@
 import { Selector } from 'testcafe';
+import { navBar } from './navbar.component';
 
 class LandingPage {
   constructor() {
