@@ -73,14 +73,12 @@ class AvailableRestaurants extends React.Component {
           </Container>
       );
     }
-    else {
-      return (
-          <Container id="availablerestaurants-page">
-            <Header as="h2" textAlign="center">Whats Open Now</Header>
-            <Header as="h3" textAlign="center" color="red">Closed For The Day!</Header>
-          </Container>
-      );
-    }
+    return (
+        <Container id="availablerestaurants-page">
+          <Header as="h2" textAlign="center">Whats Open Now</Header>
+          <Header as="h3" textAlign="center" color="red">Closed For The Day!</Header>
+        </Container>
+    );
   }
 }
 
